@@ -22,6 +22,7 @@ namespace CashRegister
 {
     public partial class burgerKindom : Form
     {
+        Random randGen = new Random();
         //setting Variables
         double burgerAmount;
         double poutineAmount;
@@ -35,14 +36,16 @@ namespace CashRegister
         double taxAmount;
         double totalPrice;
 
-        int orderNumber = 356;
+        int orderNumber;
         double tenderedAmount;
         double changeAmount;
         int tryCode;
+        
 
         public burgerKindom()
         {
             InitializeComponent();
+            orderNumber = randGen.Next(376, 1684);
         }
 
 
@@ -305,3 +308,7 @@ Not filling in values OR filling in letters will make it mad.
 If tendered amount is 0 a special message will apear, and icon changes.
 If the code "9" is put into the code box, something special will happen.
 */
+
+/*new changes
+ * Order number is randomized
+ */
